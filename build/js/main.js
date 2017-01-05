@@ -1,8 +1,10 @@
 
+document.getElementById('user_input').value = " ";
 document.getElementById('user_input').focus();
+
 function onPress_ENTER()
 {
-	var keyPressed = event.keyCode || event.which;
+	var keyPressed = event.charCode || event.which;
 
 			        //if ENTER is pressed
 			        if(keyPressed==13)
@@ -16,16 +18,18 @@ function onPress_ENTER()
 			        }
 			    }
 
+
 			    var count = 0;
 
-			    onPress_ENTER();
+			    
 			    function incre(){
-			    	
-			    	
+
+
 			    	count += 1;
 			    	var text = document.createTextNode(count);
 
 			    	var el = document.createElement("li");
+
 	//get text from input box and create node
 	var user_input = document.getElementById('user_input').value;
 	var user_input_node = document.createTextNode(user_input);
@@ -42,6 +46,7 @@ function onPress_ENTER()
 	el.appendChild(user_el);
 
 	id_el.appendChild(el);
+
 	document.getElementById('user_input').value = " ";
 	document.getElementById('user_input').focus();
 
